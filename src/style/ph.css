@@ -1,0 +1,69 @@
+/*
+* @Author: Administrator
+* @Date:   2018-06-27 22:04:16
+* @Last Modified by:   Administrator
+* @Last Modified time: 2018-06-28 13:41:21
+*/
+*{
+    margin: 0; 
+    padding: 0;
+}
+.container{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	font-size: 14px;
+}
+.header{
+	position: relative;
+	background: #eee;
+}
+.header-item{
+	line-height: 25px;
+	position: relative;
+	padding-left: 10px;
+}
+.content{
+	display: flex;
+	flex-direction: column;
+	padding-left: 10px;
+}
+.title{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-size: 16px;
+	line-height: 33px;
+	border-bottom: 1px solid #eee;
+}
+.title-item.right{
+	position: relative;
+	left: -20px;
+}
+.rank-list{
+	font-size: 18px;
+}
+.rank-item{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	line-height: 40px;
+	border-bottom: 1px solid #eee;
+}
+.rank-item .progress-list{
+	position: relative;
+	left: -30px;
+}
+.grade-list{
+	position: relative;
+	width: 28px;
+}
+.rank-item .name-list{
+	position: relative;
+	left: -33px;
+}
+
+.dev{
+	position: absolute;
+	left: 30px;
+}

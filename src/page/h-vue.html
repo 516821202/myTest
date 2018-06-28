@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,use-scalable=no">
+	<title>Document</title>
+	<script type="text/javascript" src="../js/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="../style/h-vue.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div class="header">
+            <input class="header-input" type="text"
+            v-bind:value='inputValue'>
+            <span class="header-icon"></span>
+        </div>
+    	<div class="search">
+    		<span class="search-icon"></span>
+    		<input type="text" class="search-input" placeholder="搜索">
+    	</div>
+    	<div class="option">
+    	   <ul>
+    	       <li v-for='item in list'>
+    	           <input type="checkbox" v-bind:id="item.key" v-bind:value="item.value" v-model='inputValue'>
+    	           <label v-bind:for="item.key">{{item.value}}</label>
+    	       </li>
+    	   </ul>
+    	</div>
+    </div>
+    <script>
+    	var vm = new Vue({
+    		el:'#wrapper',
+    		data:{
+                inputValue:[],
+                checked:false,
+                list:[
+                    {key:'bian',value:'变更中'},
+                    {key:'wei',value:'未生效'},
+                    {key:'zuo',value:'作废'},
+                    {key:'zheng',value:'正常'},
+                    {key:'shen',value:'审核中'},
+                ]
+    		}
+    	})
+    </script>
+</body>
+</html>

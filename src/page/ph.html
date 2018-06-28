@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,use-scalable=no">
+	<title>排行榜</title>
+	<link rel="stylesheet" type="text/css" href="../style/ph.css">
+	<link rel="stylesheet" type="text/css" href="../style/iconfont.css">
+	<script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+	<session class="container" id="root">
+		<article class="header">
+			<span class="header-item tit">周排行</span>
+			<span class="header-item tim">2018-01-30至2018-02-08</span>
+		</article>
+		<article class="content">
+			<article class="title">
+				<span class="title-item left">排名</span>
+				<span class="title-item center">前三名</span>
+				<span class="title-item right">目标完成率(订单金额)</span>
+			</article>
+			<article class="rank-list">
+			    <div class="rank-item" v-for='(item,index) in list'>
+			    	<span class="grade-list">
+			    		<span class="rank">{{index+1}}</span>
+			    		<span class="iconfont dev">&#xe7a6;</span>
+			    	</span>
+			    	<span class="name-list">{{item.name}}</span>
+			    	<span class="progress-list">
+			    		<span class="iconfont pro">&#xe67f;</span>
+			    		<span>{{item.percent}}</span>
+			    	</span>
+			    </div>
+			</article>
+		</article>
+	</session>
+	<script>
+		var vm = new Vue({
+			el:'#root',
+			data:{
+				list:[
+				    {rank:'1',iconfont:'&#xe7a6;',name:'王小明',pro:'&#xe67f;',percent:'85%'},
+				    {rank:'1',iconfont:'&#xe7a6;',name:'王小明',pro:'&#xe67f;',percent:'85%'},
+				    {rank:'1',iconfont:'&#xe7a6;',name:'王小明',pro:'&#xe67f;',percent:'85%'},
+				    {rank:'1',iconfont:'&#xe7a6;',name:'王小明',pro:'&#xe67f;',percent:'85%'},
+				    {rank:'1',iconfont:'&#xe7a6;',name:'王小明',pro:'&#xe67f;',percent:'85%'},
+				    {rank:'1',iconfont:'&#xe7a6;',name:'王小明',pro:'&#xe67f;',percent:'85%'},
+				    {rank:'1',iconfont:'&#xe7a6;',name:'王小明',pro:'&#xe67f;',percent:'85%'},
+				    {rank:'1',iconfont:'&#xe7a6;',name:'王小明',pro:'&#xe67f;',percent:'85%'},
+				    {rank:'1',iconfont:'&#xe7a6;',name:'王小明',pro:'&#xe67f;',percent:'85%'},
+				    {rank:'1',iconfont:'&#xe7a6;',name:'王小明',pro:'&#xe67f;',percent:'85%'},
+				    {rank:'1',iconfont:'&#xe7a6;',name:'王小明',pro:'&#xe67f;',percent:'85%'},
+				    {rank:'1',iconfont:'&#xe7a6;',name:'王小明',pro:'&#xe67f;',percent:'85%'},
+				    {rank:'1',iconfont:'&#xe7a6;',name:'王小明',pro:'&#xe67f;',percent:'85%'},
+				    {rank:'1',iconfont:'&#xe7a6;',name:'王小明',pro:'&#xe67f;',percent:'85%'},
+				    {rank:'1',iconfont:'&#xe7a6;',name:'王小明',pro:'&#xe67f;',percent:'85%'},
+				    
+				]
+			},
+
+
+		    })
+	</script>
+</body>
+</html>
